@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     name: "start",
-    credits: "LIKHON X TISHA",
+    credits: "LIKHON AHMED",
     aliases: [],
     prefix: true,
     permission: 0,
@@ -56,11 +56,9 @@ module.exports = {
       if (!global.verifiedUsers) global.verifiedUsers = {};
       global.verifiedUsers[userId] = true;
       
-      // *** JSON সেভ লজিক যুক্ত করা হয়েছে (কমান্ড রান করার সময়) ***
       if (global.saveVerifiedUsers) {
         await global.saveVerifiedUsers(); 
       }
-      // ********************************************************
 
       const welcomeMessage = `
 ✨ **Welcome to ${botName}!** ✨
@@ -69,24 +67,12 @@ module.exports = {
 
 💡 I am your all-in-one assistant, ready to help you with:
 ─────────────────────────────
-📌 **Features:**
-• 🔒 Chat Lock System → \`/lock\`
-• 🤖 AI Chat (Gemini) → \`/gemini\`
-• 🖼 AI Image Tools → \`/img\`
-• 🤖 AI Chat (GPT) → \`/ai\`
 • ⚙️ Help See All cmnd → \`/help\`
 ─────────────────────────────
-
-🚀 **Quick Tips:**
-• Type \`/help\` to see all commands.
-• Reply to images with \`/img\` to use AI tools.
-• Use \`/lock\` to manage chat locks.
-• Explore Gemini AI with \`/gemini\`.
-
 💎 **Premium Experience Activated!** Enjoy smooth, fast, and responsive commands.
 ─────────────────────────────
 
-© Developed by 𝐗-𝐓𝐑𝐄𝐌 𝐋𝐈𝐊𝐇𝐎𝐍 𝐀𝐇𝐌𝐄𝐃 💕
+© Developed by 𝐋𝐈𝐊𝐇𝐎𝐍 𝐀𝐇𝐌𝐄𝐃 💕
       `.trim();
 
       return bot.sendMessage(
@@ -178,11 +164,9 @@ module.exports = {
         if (!global.verifiedUsers) global.verifiedUsers = {};
         global.verifiedUsers[userId] = true;
         
-        // *** JSON সেভ লজিক যুক্ত করা হয়েছে (কলব্যাক সফল হওয়ার পর) ***
         if (global.saveVerifiedUsers) {
           await global.saveVerifiedUsers(); 
         }
-        // **********************************************************
 
         await bot.answerCallbackQuery(query.id, {
           text: "✔ Verification Successful!"
