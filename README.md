@@ -1,1 +1,0 @@
-# LIKHON-TG-BOT
